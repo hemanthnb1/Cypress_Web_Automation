@@ -13,7 +13,7 @@ describe("Add to cart", () => {
     cy.visit("https://web-playground.ultralesson.com/");
   });
 
-  it("Should Navigate to Home Page", function () {
+  it("Should verify the product available to checkout", function () {
     homepage.clickOnSearchIcon();
     searchPage.searchProductFromSearchBox(this.testData.products.sneakers);
     searchPage.selectFirstProductFromSuggetionList();

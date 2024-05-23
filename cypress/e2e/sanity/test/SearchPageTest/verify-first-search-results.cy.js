@@ -10,7 +10,7 @@ describe("Search Page", () => {
     cy.visit("https://web-playground.ultralesson.com/");
   });
 
-  it("Should Navigate to Home Page", function() {  
+  it("Should verify search result is same as input", function() {  
     homepage.clickOnSearchIcon();
     searchPage.searchProductFromSearchBox(this.testData.products.sneakers);
     cy.get(searchPage.firstProductFromSuggestionList).should('include.text', this.testData.products.sneakers);
