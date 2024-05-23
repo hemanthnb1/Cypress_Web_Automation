@@ -1,5 +1,5 @@
-import HomePage from "../../pages/HomePage";
-import SearchPage from "../../pages/SearchPage";
+import HomePage from "../../../../pages/HomePage";
+import SearchPage from "../../../../pages/SearchPage";
 
 describe("Search Page", () => {
   const homepage = new HomePage();

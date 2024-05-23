@@ -1,8 +1,8 @@
-import AccountDetailPage from "../../pages/AccountDetailPage";
-import HomePage from "../../pages/HomePage";
-import LoginPage from "../../pages/LoginPage";
+import AccountDetailPage from "../../../../pages/AccountDetailPage";
+import HomePage from "../../../../pages/HomePage";
+import LoginPage from "../../../../pages/LoginPage";
 
-describe("Search Page", () => {
+describe("Login Page", () => {
   const homepage = new HomePage();
   const loginPage = new LoginPage();
   const accountDetailPage= new AccountDetailPage()
@@ -12,7 +12,7 @@ describe("Search Page", () => {
     cy.visit("https://web-playground.ultralesson.com/");
   });
 
-  it("Should Navigate to Home Page", function () {
+  it("Should Login User and navigate to Account details Page", function () {
     homepage.clickOnAccountIcon();
     loginPage.doLogin(
       this.testData.credential.email,

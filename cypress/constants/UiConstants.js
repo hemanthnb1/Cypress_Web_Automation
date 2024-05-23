@@ -4,6 +4,8 @@ const homePageConstants = {
 
 const productsPageConstants = {
   title: "Products – ul-web-playground",
+  soldOut:"Sold out",
+  addToCart:"Add to cart"
 };
 
 const contactPageConstants = {

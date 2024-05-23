@@ -1,8 +1,8 @@
-import { loginPageConstants, contactPageConstants, homePageConstants, productsPageConstants } from "../../constants/UiConstants";
-import ContactPage from "../../pages/ContactPage";
-import HomePage from "../../pages/HomePage";
-import LoginPage from "../../pages/LoginPage";
-import ProductsPage from "../../pages/ProductsPage";
+import { loginPageConstants, contactPageConstants, homePageConstants, productsPageConstants } from "../../../../constants/UiConstants";
+import ContactPage from "../../../../pages/ContactPage";
+import HomePage from "../../../../pages/HomePage";
+import LoginPage from "../../../../pages/LoginPage";
+import ProductsPage from "../../../../pages/ProductPage";
 
 describe("Home Page", () => {
   const homePage = new HomePage();
