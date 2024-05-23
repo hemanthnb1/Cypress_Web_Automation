@@ -1,9 +1,9 @@
-import { productsPageConstants } from "../../../constants/UiConstants";
-import HomePage from "../../../pages/HomePage";
-import ProductsPage from "../../../pages/ProductPage";
-import SearchPage from "../../../pages/SearchPage";
+import { productsPageConstants } from "../../../../constants/UiConstants";
+import HomePage from "../../../../pages/HomePage";
+import ProductsPage from "../../../../pages/ProductPage";
+import SearchPage from "../../../../pages/SearchPage";
 
-describe("e2e Add to cart", () => {
+describe("Add to cart", () => {
   const homepage = new HomePage();
   const searchPage = new SearchPage();
   const productpage = new ProductsPage();
@@ -17,6 +17,6 @@ describe("e2e Add to cart", () => {
     homepage.clickOnSearchIcon();
     searchPage.searchProductFromSearchBox(this.testData.products.sneakers);
     searchPage.selectFirstProductFromSuggetionList();
-    productpage.addToCart.should('be.visible')
+    productpage.addToCartButton.should('be.visible')
   });
 });

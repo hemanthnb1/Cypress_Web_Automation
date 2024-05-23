@@ -19,6 +19,7 @@ const loginPageConstants = {
 
 const cartPageConstants = {
   title: "Your Shopping Cart – ul-web-playground",
+  cartCount:"1"
 };
 
 const accountsPageConstants = {

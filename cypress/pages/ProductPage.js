@@ -7,8 +7,11 @@ class ProductsPage extends BasePage {
   get productSoldOut() {
     return cy.get(this.#soldOut);
   }
-  get addToCart() {
+  get addToCartButton() {
     return cy.get(this.#addToCart);
+  }
+  clickOnAddToCart=()=>{
+    this.addToCartButton.click()
   }
 }
 export default ProductsPage;
