@@ -7,7 +7,12 @@ class HomePage extends BasePage {
   #accountIcon=".header__icon--account"
   #cartIcon=".header__icon--cart";
   #searchIcon=".header__search";
+  #homeIcon=".header__menu-item"
 
+  clickOnHomeIcon=()=>{
+    cy.get(this.#storeMenu).eq(0).click(); 
+  }
+  
   clickOnStoreMenu = () => {
     cy.get(this.#storeMenu).eq(1).click();
   };

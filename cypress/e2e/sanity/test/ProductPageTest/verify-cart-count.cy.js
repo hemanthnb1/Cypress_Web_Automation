@@ -23,6 +23,6 @@ describe("Cart Functionality", () => {
     searchPage.searchProductFromSearchBox(this.testData.products.sneakers);
     searchPage.selectFirstProductFromSuggetionList();
     productpage.clickOnAddToCart();
-    cartPage.cartCount.should("have.text", cartPageConstants.cartCount);
+    productpage.cartCount.should("have.text", productsPageConstants.cartCount);
   });
 });

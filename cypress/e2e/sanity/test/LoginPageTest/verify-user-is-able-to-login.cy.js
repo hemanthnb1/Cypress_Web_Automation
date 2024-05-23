@@ -5,7 +5,7 @@ import LoginPage from "../../../../pages/LoginPage";
 describe("Login Page", () => {
   const homepage = new HomePage();
   const loginPage = new LoginPage();
-  const accountDetailPage= new AccountDetailPage()
+  const accountDetailPage = new AccountDetailPage();
 
   beforeEach(function () {
     cy.fixture("testdata").as("testData");

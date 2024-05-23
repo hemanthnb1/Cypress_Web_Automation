@@ -5,7 +5,9 @@ const homePageConstants = {
 const productsPageConstants = {
   title: "Products – ul-web-playground",
   soldOut:"Sold out",
-  addToCart:"Add to cart"
+  addToCart:"Add to cart",
+  cartCount:"1"
+
 };
 
 const contactPageConstants = {
@@ -19,7 +21,6 @@ const loginPageConstants = {
 
 const cartPageConstants = {
   title: "Your Shopping Cart – ul-web-playground",
-  cartCount:"1"
 };
 
 const accountsPageConstants = {
