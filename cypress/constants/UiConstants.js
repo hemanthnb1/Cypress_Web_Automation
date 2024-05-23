@@ -10,17 +10,23 @@ const contactPageConstants = {
   title: "Contact – ul-web-playground",
 };
 
-const accountPageConstants = {
+const loginPageConstants = {
   title: "Account – ul-web-playground",
+  signIn: "Sign in",
 };
 
 const cartPageConstants = {
   title: "Your Shopping Cart – ul-web-playground",
 };
+
+const accountsPageConstants = {
+  logOutIcon: "Log out",
+};
 export {
   homePageConstants,
   productsPageConstants,
   contactPageConstants,
-  accountPageConstants,
-  cartPageConstants
+  loginPageConstants,
+  cartPageConstants,
+  accountsPageConstants
 };

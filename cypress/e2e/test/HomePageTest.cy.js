@@ -1,15 +1,14 @@
-import { accountPageConstants, contactPageConstants, homePageConstants, productsPageConstants } from "../../constants/UiConstants";
-import AccountPage from "../../pages/AccountPage";
+import { loginPageConstants, contactPageConstants, homePageConstants, productsPageConstants } from "../../constants/UiConstants";
 import ContactPage from "../../pages/ContactPage";
 import HomePage from "../../pages/HomePage";
+import LoginPage from "../../pages/LoginPage";
 import ProductsPage from "../../pages/ProductsPage";
-import ProductPage from "../../pages/ProductsPage";
 
 describe("Home Page", () => {
   const homePage = new HomePage();
   const productPage = new ProductsPage();
   const contactPage= new ContactPage();
-  const accountPage= new AccountPage();
+  const loginPage= new LoginPage ();
 
 
   beforeEach(() => {
@@ -32,16 +31,16 @@ describe("Home Page", () => {
 
   it("Should Navigate to Account Page",()=>{
     homePage.clickOnAccountIcon();
-    accountPage.getTitle().should("eq", accountPageConstants.title)
+    loginPage.getTitle().should("eq", loginPageConstants.title)
   })
 
   it("Should Navigate to Account Page",()=>{
     homePage.clickOnAccountIcon();
-    accountPage.getTitle().should("eq", accountPageConstants.title)
+    loginPage.getTitle().should("eq", loginPageConstants.title)
   })
 
   it("Should Navigate to Cart Page",()=>{
     homePage.clickOnAccountIcon();
-    accountPage.getTitle().should("eq", accountPageConstants.title)
+    loginPage.getTitle().should("eq", loginPageConstants.title)
   })
 });
