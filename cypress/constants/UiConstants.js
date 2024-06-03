@@ -1,13 +1,14 @@
+// uiConstants.js
+
 const homePageConstants = {
   title: "ul-web-playground",
 };
 
 const productsPageConstants = {
   title: "Products – ul-web-playground",
-  soldOut:"Sold out",
-  addToCart:"Add to cart",
-  cartCount:"1"
-
+  soldOut: "Sold out",
+  addToCart: "Add to cart",
+  cartCount: "1"
 };
 
 const contactPageConstants = {
@@ -26,6 +27,7 @@ const cartPageConstants = {
 const accountsPageConstants = {
   logOutIcon: "Log out",
 };
+
 export {
   homePageConstants,
   productsPageConstants,

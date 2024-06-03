@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import {
+  getEmailInputbox,
+  getPasswordInputbox,
+  getSigninButton,
+} from "./components/LoginPage/Selectors";
+
+Cypress.Commands.add("login", (email, password) => {
+  getEmailInputbox().type(email);
+  getPasswordInputbox().type(password);
+  getSigninButton().click();
+});

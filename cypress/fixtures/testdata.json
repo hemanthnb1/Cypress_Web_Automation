@@ -1,9 +1,5 @@
 {
     "products":{
         "sneakers":"Sneaker"
-    },
-    "credential":{
-        "email":"cypress.automation_07@gmail.com",
-        "password":"1234567890@Cy"
     }
 }

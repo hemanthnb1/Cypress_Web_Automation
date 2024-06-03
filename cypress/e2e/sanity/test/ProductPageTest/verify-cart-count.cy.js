@@ -1,28 +1,21 @@
 import {
-  cartPageConstants,
-  productsPageConstants,
-} from "../../../../constants/UiConstants";
-import CartPage from "../../../../pages/CartPage";
-import HomePage from "../../../../pages/HomePage";
-import ProductsPage from "../../../../pages/ProductPage";
-import SearchPage from "../../../../pages/SearchPage";
+  getAddToCartButton,
+  getCartCount,
+} from "../../../../support/components/ProductPage/Selectors";
+
+import { productsPageConstants } from "../../../../constants/uiConstants";
+import { getSearchIcon } from "../../../../support/components/HomePage/Selectors";
+import {
+  getFirstProduct,
+  getSearchInputBox,
+} from "../../../../support/components/SearchPage/Selectors";
 
 describe("Cart Functionality", () => {
-  const homepage = new HomePage();
-  const searchPage = new SearchPage();
-  const productpage = new ProductsPage();
-  const cartPage = new CartPage();
-
-  beforeEach(function () {
-    cy.fixture("testdata").as("testData");
-    cy.visit("https://web-playground.ultralesson.com/");
-  });
-
-  it("should add a product to the cart and verify the cart count", function () {
-    homepage.clickOnSearchIcon();
-    searchPage.searchProductFromSearchBox(this.testData.products.sneakers);
-    searchPage.selectFirstProductFromSuggetionList();
-    productpage.clickOnAddToCart();
-    productpage.cartCount.should("have.text", productsPageConstants.cartCount);
+  it("verify the cart count is same as products added to cart", function () {
+    getSearchIcon().click();
+    getSearchInputBox().type(this.testData.products.sneakers);
+    getFirstProduct().then((element) => element.click());
+    getAddToCartButton().click();
+    getCartCount().should("have.text", productsPageConstants.cartCount);
   });
 });

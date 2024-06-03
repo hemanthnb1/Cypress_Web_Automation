@@ -1,18 +1,12 @@
-import HomePage from "../../../../pages/HomePage";
-import SearchPage from "../../../../pages/SearchPage";
-
+import { getSearchIcon } from "../../../../support/components/HomePage/Selectors";
+import {
+  getFirstProduct,
+  getSearchInputBox,
+} from "../../../../support/components/SearchPage/Selectors";
 describe("Search Page", () => {
-  const homepage = new HomePage();
-  const searchPage = new SearchPage();
-
-  beforeEach(function() { 
-    cy.fixture("testdata").as("testData");
-    cy.visit("https://web-playground.ultralesson.com/");
-  });
-
-  it("Should verify search result is same as input", function() {  
-    homepage.clickOnSearchIcon();
-    searchPage.searchProductFromSearchBox(this.testData.products.sneakers);
-    cy.get(searchPage.firstProductFromSuggestionList).should('include.text', this.testData.products.sneakers);
+  it("Verify search result is same as input", function () {
+    getSearchIcon().click();
+    getSearchInputBox().type(this.testData.products.sneakers);
+    getFirstProduct().should("include.text", this.testData.products.sneakers);
   });
 });

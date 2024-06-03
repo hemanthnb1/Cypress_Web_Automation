@@ -15,6 +15,16 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import { getHomeIcon } from './components/HomePage/Selectors';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+beforeEach(() => {
+    // Perform common setup tasks
+    cy.visit('https://web-playground.ultralesson.com/account/login');
+    cy.login(Cypress.env('email'), Cypress.env('password'));
+    getHomeIcon().click();
+    cy.fixture("testdata").as("testData"); // Visit your application URL
+    // cy.login(Cypress.env('email'), Cypress.env('password'));
+  });

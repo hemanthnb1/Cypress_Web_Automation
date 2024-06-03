@@ -1,22 +1,12 @@
-import { productsPageConstants } from "../../../../constants/UiConstants";
-import HomePage from "../../../../pages/HomePage";
-import ProductsPage from "../../../../pages/ProductPage";
-import SearchPage from "../../../../pages/SearchPage";
-
+import { getAddToCartButton } from "../../../../support/components/ProductPage/Selectors";
+import { getSearchIcon } from "../../../../support/components/HomePage/Selectors";
+import { getFirstProduct, getSearchInputBox } from "../../../../support/components/SearchPage/Selectors";
 describe("Add to cart", () => {
-  const homepage = new HomePage();
-  const searchPage = new SearchPage();
-  const productpage = new ProductsPage();
 
-  beforeEach(function () {
-    cy.fixture("testdata").as("testData");
-    cy.visit("https://web-playground.ultralesson.com/");
-  });
-
-  it("Should verify the product available to checkout", function () {
-    homepage.clickOnSearchIcon();
-    searchPage.searchProductFromSearchBox(this.testData.products.sneakers);
-    searchPage.selectFirstProductFromSuggetionList();
-    productpage.addToCartButton.should('be.visible')
+  it("Verify the product available to checkout", function () {
+    getSearchIcon().click();
+    getSearchInputBox().type(this.testData.products.sneakers);
+    getFirstProduct().then((element) => element.click());
+    getAddToCartButton().should("be.visible");
   });
 });
